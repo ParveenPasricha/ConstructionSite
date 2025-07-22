@@ -7,6 +7,7 @@ import Service from './Components/Service'
 import Career from './Components/Career'
 import Contact from './Components/Contact'
 import FeedbackForm from './Components/FeedbackForm'
+import Footer from './Components/Footer'
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ const App = () => {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/feedbackform' element={<FeedbackForm/>}/>
     </Routes>
+    <Footer/>
     </BrowserRouter>
   )
 }

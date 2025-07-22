@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    rating: '',
-    message: '',
+    name: "",
+    email: "",
+    rating: "",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
@@ -20,17 +20,21 @@ const FeedbackForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can send data to API here
-    console.log('Feedback Submitted:', formData);
+    console.log("Feedback Submitted:", formData);
     setSubmitted(true);
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
       <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center text-orange-500">Feedback Form</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-orange-500">
+          Feedback Form
+        </h2>
 
         {submitted ? (
-          <p className="text-green-600 text-center text-lg">Thank you for your feedback! 😊</p>
+          <p className="text-green-600 text-center text-lg">
+            Thank you for your feedback! 😊
+          </p>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
